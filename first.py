@@ -12,13 +12,7 @@ from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 
 from sklearn.metrics import accuracy_score
-import mysql.connector
-mydb = mysql.connector.connect(host="localhost",user="root",password="Gayatri@123",auth_plugin='mysql_native_password',database="webapp")
-mycursor = mydb.cursor()
-def login_user(fname,password):
-	mycursor.execute("SELECT * FROM users WHERE fname=%s AND password=%s", (fname,password))
-	data = mycursor.fetchall()
-	return data
+
 	
 
 st.title("A simple data science app")
